@@ -61,16 +61,19 @@
    };
     </script>
    
-    <script> 
+   <script type="text/javascript">
     
-        var urlParams = new URLSearchParams(window.location.search);
+    function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
 
-            console.log(urlParams.has('post')); 
-            console.log(urlParams.get('action')); 
-            console.log(urlParams.getAll('action')); 
-            console.log(urlParams.toString()); 
-            console.log(urlParams.append('active', '1'));
-    
     </script>
     
 </html>
