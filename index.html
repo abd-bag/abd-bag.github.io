@@ -61,6 +61,16 @@
    };
     </script>
    
-    <script> var queryString = location.search; </script>
+    <script> 
+    
+        var urlParams = new URLSearchParams(window.location.search);
+
+            console.log(urlParams.has('post')); 
+            console.log(urlParams.get('action')); 
+            console.log(urlParams.getAll('action')); 
+            console.log(urlParams.toString()); 
+            console.log(urlParams.append('active', '1'));
+    
+    </script>
     
 </html>
