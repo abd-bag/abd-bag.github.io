@@ -28,12 +28,18 @@
 
     <script type="text/javascript">
         document.getElementById('LoginWithAmazon').onclick = function() {
-        options = { scope : 'appstore::apps:readwrite' };
+        options = {
+    "grant_type": "client_credentials",
+    "client_id": "amzn1.application-oa2-client.a562f30a4c3141f69ed6fe8e3eee1a6e",
+    "client_secret": "4db4b3415e326bd46cf164231e989eb4cb9e3b0519d98e27826552a9fa618696",    
+    "scope": "appstore::apps:readwrite"
+};
         amazon.Login.authorize(options,'https://abd-bag.github.io/');
         return false;
         };
     </script>
   
+   
 
 </body>
 
