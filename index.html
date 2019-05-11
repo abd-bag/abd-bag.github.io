@@ -28,7 +28,7 @@
 
     <script type="text/javascript">
         document.getElementById('LoginWithAmazon').onclick = function() {
-        options = { scope : 'profile' };
+        options = { scope : 'appstore::apps:readwrite' };
         amazon.Login.authorize(options,'https://abd-bag.github.io/');
         return false;
         };
